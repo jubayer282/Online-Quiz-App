@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "744707122420",
+    "firebase_url": "https://quizappadmob-14f3a-default-rtdb.firebaseio.com",
+    "project_id": "quizappadmob-14f3a",
+    "storage_bucket": "quizappadmob-14f3a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:744707122420:android:ad8750e756cf4759c6aaa1",
+        "android_client_info": {
+          "package_name": "com.jubayer.onlinequizeadmob"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "744707122420-uibbe9ktl26ur5537mg1a1kc1r069fk6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.jubayer.onlinequizeadmob",
+            "certificate_hash": "8d1016c6362bffee31705cec487888642de4d798"
+          }
+        },
+        {
+          "client_id": "744707122420-b7gd43619l6j9jaiqfmbh3m440hg8m0c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUt97PTy8_LIQWVuzaEPpYOnY3j46Y_7c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "744707122420-b7gd43619l6j9jaiqfmbh3m440hg8m0c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
