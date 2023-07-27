@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="General">
+        <menu>
+            <item
+                android:id="@+id/score"
+                android:icon="@drawable/baseline_event_note_24"
+                android:title="Score" />
+        </menu>
+    </item>
+
+    <!--design part -2-->
+    <item android:title="Support">
+        <menu>
+            <item
+                android:id="@+id/rating"
+                android:icon="@drawable/baseline_star_half_24"
+                android:title="Rate App" />
+
+            <item
+                android:id="@+id/shareapp"
+                android:icon="@drawable/baseline_share_24"
+                android:title="Share App" />
+        </menu>
+
+    </item>
+    <item android:title="Logout">
+        <menu>
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/baseline_logout_24"
+                android:title="Logout" />
+        </menu>
+
+    </item>
+
+</menu>

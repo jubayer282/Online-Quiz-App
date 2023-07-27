@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+    <!-- -Giving Internet Permission in the Manifest file -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/quiz_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/quiz_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Material3.Light"
+        tools:targetApi="31" >
+
+        <activity
+            android:name=".Splash"
+            android:theme="@style/Theme.AppCompat.DayNight"
+            android:exported="true">
+        <intent-filter>
+
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+
+        </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".Register"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:theme="@style/Theme.Material3.Light.NoActionBar"
+            android:exported="true" >
+            <!-- -Making startActivity as launcher activity -->
+
+
+        </activity>
+
+        <activity android:name=".QuizResult" />
+        <activity
+            android:name=".StartActivity"
+            android:exported="true" >
+
+
+        </activity>
+
+        <activity android:name=".MainActivity" />
+    </application>
+
+</manifest>

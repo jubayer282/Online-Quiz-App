@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <TextView
+                android:id="@+id/currentQuestionTV"
+                android:layout_marginLeft="23dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Question 1"
+                android:fontFamily="@font/poppins_semibold"
+                android:textColor="#E6FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/totalQuestionsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="/10"
+                android:textSize="20sp"
+                android:textColor="#80FFFFFF"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_toStartOf="@+id/quizTimer"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/timer"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/quizTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00:00"
+            android:textSize="18sp"
+            android:textColor="@color/secondary"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="5sp"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/topBar"
+        android:layout_marginTop="10dp"
+        android:background="#80FFFFFF"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/divider"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:id="@+id/questionTV"/>
+
+        <!--- Option Icon 1-->
+        <RelativeLayout
+            android:id="@+id/option1Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/round_back_white_10">
+
+            <TextView
+                android:id="@+id/option1TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginEnd="15sp"
+                android:layout_marginBottom="15sp"
+                android:layout_toStartOf="@+id/option1Icon"
+                android:text="Option 1"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/round_back_white50"
+                android:id="@+id/option1Icon"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                />
+
+        </RelativeLayout>
+        <!--- Option Icon 2-->
+        <RelativeLayout
+            android:id="@+id/option2Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/round_back_white_10">
+
+            <TextView
+                android:id="@+id/option2TV"
+                android:layout_toStartOf="@+id/option2Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:text="Option 2"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/round_back_white50"
+                android:id="@+id/option2Icon"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                />
+
+        </RelativeLayout>
+        <!--- Option Icon 3-->
+        <RelativeLayout
+            android:id="@+id/option3Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/round_back_white_10">
+
+            <TextView
+                android:id="@+id/option3TV"
+                android:layout_toStartOf="@+id/option3Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:text="Option 3"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/round_back_white50"
+                android:id="@+id/option3Icon"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                />
+
+        </RelativeLayout>
+        <!--- Option Icon 4-->
+        <RelativeLayout
+            android:id="@+id/option4Layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/round_back_white_10">
+
+            <TextView
+                android:id="@+id/option4TV"
+                android:layout_toStartOf="@+id/option4Icon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15sp"
+                android:text="Option 4"
+                android:textColor="#FFFFFF"
+                android:textSize="18dp"/>
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/round_back_white50"
+                android:id="@+id/option4Icon"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/nextQuestionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/round_back_secondary_100"
+        android:text="Next Question"
+        android:textSize="17dp"/>
+
+
+</RelativeLayout>
+
