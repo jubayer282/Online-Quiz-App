@@ -46,6 +46,9 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().setTitle("Login Page");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         /*init views*/
         mAuth = FirebaseAuth.getInstance();
         editTextEmail = findViewById(R.id.email);

@@ -23,6 +23,8 @@ public class QuizResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_result);
 
+        getSupportActionBar().setTitle("Your Result");
+
         final TextView scoreTV = findViewById(R.id.scoreTV);
         final TextView totalScoreTV = findViewById(R.id.totalScoreTV);
         final TextView correctTV = findViewById(R.id.correctTV);

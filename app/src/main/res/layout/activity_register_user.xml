@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/blue"
+    tools:context=".RegisterUser">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Here"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"/>
+
+   <EditText
+       android:id="@+id/name"
+       android:layout_width="match_parent"
+       android:layout_height="50dp"
+       android:layout_marginStart="10dp"
+       android:layout_marginEnd="10dp"
+       android:layout_marginTop="10dp"
+       android:hint="Name"
+       android:paddingStart="10dp"
+       android:textColor="@color/blue"
+       android:background="@drawable/round_back_white_100"
+       />
+
+    <EditText
+        android:id="@+id/mobileNo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Mobile No"
+        android:maxLength="11"
+        android:paddingStart="10dp"
+        android:textColor="@color/blue"
+        android:background="@drawable/round_back_white_100"
+        />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Email"
+        android:paddingStart="10dp"
+        android:textColor="@color/blue"
+        android:background="@drawable/round_back_white_100"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Password"
+        android:paddingStart="10dp"
+        android:textColor="@color/blue"
+        android:background="@drawable/round_back_white_100"
+        />
+
+    <EditText
+        android:id="@+id/confirmPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:hint="Confirm Password"
+        android:paddingStart="10dp"
+        android:textColor="@color/blue"
+        android:background="@drawable/round_back_white_100"
+        />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_back_secondary_100"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:textStyle="bold|italic"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:textColor="@color/secondary"
+        android:id="@+id/loginNowBtn"
+        android:layout_marginTop="20dp"
+        android:text="@string/click_to_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

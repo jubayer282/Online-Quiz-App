@@ -45,6 +45,8 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
+        getSupportActionBar().setTitle("Home Page");
+
         auth = FirebaseAuth.getInstance();
         textView = findViewById(R.id.user_details);
         user = auth.getCurrentUser();
@@ -109,10 +111,10 @@ public class StartActivity extends AppCompatActivity {
 
         if (itemId == R.id.score) {
 
-            Toast.makeText(this, "Teacher Profile", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Your Score", Toast.LENGTH_SHORT).show();
 
         } else if (itemId == R.id.rating) {
-            Toast.makeText(this, "Create Student Profile", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Thank Yor for Rating", Toast.LENGTH_SHORT).show();
             // startActivity(new Intent(MainActivity.this, TicketManagerActivity.class));
 
         } else if (itemId == R.id.shareapp) {

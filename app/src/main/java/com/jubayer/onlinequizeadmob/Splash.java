@@ -45,7 +45,7 @@ public class Splash extends AppCompatActivity {
                     startActivity(intent);
                     finish();
                 }*/
-                startActivity(new Intent(getApplicationContext(), Login.class));
+               startActivity(new Intent(Splash.this, SignIn.class));
                 progressBarSp.setVisibility(View.VISIBLE);
                 finish();
 
