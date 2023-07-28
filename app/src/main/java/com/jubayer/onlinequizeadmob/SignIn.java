@@ -15,6 +15,7 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.jubayer.onlinequizeadmob.databinding.ActivityRegisterUserBinding;
 import com.jubayer.onlinequizeadmob.databinding.ActivitySignInBinding;
 
 public class SignIn extends AppCompatActivity {
@@ -27,6 +28,7 @@ public class SignIn extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
 
@@ -36,8 +38,7 @@ public class SignIn extends AppCompatActivity {
         dialog.setCancelable(false);
         dialog.setMessage("Loading....");
 
-        if (auth.getCurrentUser() != null)
-        {
+        if (auth.getCurrentUser() != null) {
             startActivity(new Intent(SignIn.this, StartActivity.class));
             finish();
 
@@ -48,24 +49,28 @@ public class SignIn extends AppCompatActivity {
         });
 
         binding.loginBtn.setOnClickListener(view -> {
+
             logInUser();
+
         });
     }
-    private Boolean validateEmail(){
+
+    private Boolean validateEmail() {
         String val = binding.email.getText().toString();
         String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]";
 
-        if (val.isEmpty()){
+        if (val.isEmpty()) {
             binding.email.setError("Field cannot be Empty");
             return false;
-        } else if (!val.matches(emailPattern)){
+        } else if (!val.matches(emailPattern)) {
             return false;
         } else {
             binding.email.setError(null);
             return true;
         }
     }
-    private Boolean validatePassword(){
+
+    private Boolean validatePassword() {
         String val = binding.password.getText().toString();
         String passwordVal = "^" +
                 "(?=.*[a-zA-Z])" +
@@ -88,29 +93,22 @@ public class SignIn extends AppCompatActivity {
     }
 
     private void logInUser() {
-        if (!validateEmail() || !validatePassword())
-        {
-            return;
-        }
-        else {
 
-            emailStr = binding.email.getText().toString();
-            passwordStr = binding.password.getText().toString();
-            dialog.show();
+        emailStr = binding.email.getText().toString();
+        passwordStr = binding.password.getText().toString();
+        dialog.show();
+        logInUsers(emailStr, passwordStr);
 
-            logInUsers(emailStr, passwordStr);
-        }
     }
 
     private void logInUsers(String emailStr, String passwordStr) {
         auth.signInWithEmailAndPassword(emailStr, passwordStr).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful())
-                {
+                if (task.isSuccessful()) {
                     dialog.dismiss();
                     startActivity(new Intent(SignIn.this, StartActivity.class));
-                    finish();
+                    // finish();
                 }
             }
         }).addOnFailureListener(new OnFailureListener() {

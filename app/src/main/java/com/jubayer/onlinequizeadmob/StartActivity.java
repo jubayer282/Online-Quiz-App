@@ -57,7 +57,7 @@ public class StartActivity extends AppCompatActivity {
 
 
         if (user == null) {
-            Intent intent = new Intent(getApplicationContext(), Login.class);
+            Intent intent = new Intent(getApplicationContext(), SignIn.class);
             startActivity(intent);
             finish();
         } else {
@@ -127,9 +127,9 @@ public class StartActivity extends AppCompatActivity {
         } else if (itemId == R.id.logout) {
 
             FirebaseAuth.getInstance().signOut();
-            Intent intent = new Intent(getApplicationContext(), Login.class);
+            Intent intent = new Intent(getApplicationContext(), SignIn.class);
             startActivity(intent);
-            finish();
+            finishAffinity();
 
         } else if (itemId == R.id.userDisplayEmail) {
 

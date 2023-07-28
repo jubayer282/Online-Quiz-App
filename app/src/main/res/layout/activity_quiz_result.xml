@@ -4,30 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/primary"
+    android:orientation="vertical"
     tools:context=".QuizResult">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
+        android:text="Quiz Result"
         android:textColor="#FFFFFF"
         android:textSize="25sp"
-        android:textStyle="bold"
-        android:text="Quiz Result"/>
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="0dp"
         android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_marginTop="15dp"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:adjustViewBounds="true"
             android:src="@drawable/winner" />
 
@@ -38,28 +38,28 @@
             android:fontFamily="@font/poppins_bold"
             android:text="Congratulations"
             android:textColor="#FFFFFF"
-            android:textSize="25sp"/>
+            android:textSize="25sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginTop="20dp"
             android:layout_marginStart="50dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="50dp"
+            android:fontFamily="@font/sf_ns_text"
+            android:gravity="center"
             android:letterSpacing=".1"
             android:text="You've complete the quiz successfully"
-            android:textSize="16sp"
             android:textColor="#CCFFFFFF"
-            android:fontFamily="@font/sf_ns_text"/>
+            android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:letterSpacing=".2"
             android:layout_marginTop="10dp"
-            android:textColor="#80FFFFFF"
-            android:text="YOUR SCORE"/>
+            android:letterSpacing=".2"
+            android:text="YOUR SCORE"
+            android:textColor="#80FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -71,23 +71,23 @@
                 android:id="@+id/scoreTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:letterSpacing=".2"
                 android:text="0"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/color3"
                 android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/totalScoreTV"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
                 android:letterSpacing=".2"
                 android:text="/10"
-                android:layout_marginTop="10dp"
                 android:textColor="@color/white"
                 android:textSize="30sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
 
@@ -95,105 +95,116 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginEnd="30dp"
             android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
             android:layout_weight="2"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="20dp"
-                android:orientation="vertical"
-                android:layout_weight="1"
                 android:layout_marginRight="0dp"
-                android:gravity="center">
+                android:layout_marginBottom="20dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing=".2"
-                    android:textColor="#80FFFFFF"
                     android:layout_marginRight="30dp"
-                    android:text="CORRECT"/>
+                    android:letterSpacing=".2"
+                    android:text="CORRECT"
+                    android:textColor="#80FFFFFF" />
 
                 <TextView
                     android:id="@+id/correctTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="22sp"
-                    android:text="0"
                     android:layout_marginRight="30dp"
-                    android:textStyle="bold"
-                    android:textColor="#FFFFFF"/>
+                    android:text="0"
+                    android:textColor="#FFFFFF"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_weight="1"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:letterSpacing=".2"
-                    android:textColor="#80FFFFFF"
                     android:layout_marginRight="10dp"
-                    android:text="INCORRECT"/>
+                    android:letterSpacing=".2"
+                    android:text="INCORRECT"
+                    android:textColor="#80FFFFFF" />
 
                 <TextView
                     android:id="@+id/inCorrectTV"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="22sp"
-                    android:text="0"
-                    android:textStyle="bold"
                     android:layout_marginRight="10dp"
-                    android:textColor="#F40303"/>
+                    android:text="0"
+                    android:textColor="#F40303"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:layout_marginEnd="30dp"
-        android:layout_marginStart="30dp">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/shareBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_back_white_100"
+                android:text="Share Result"
+                android:textAllCaps="false" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/reTakeQuizBtn"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="15dp"
+                android:layout_weight="1"
+                android:background="@drawable/round_back_secondary_10"
+                android:text="Re-Take Quiz"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF" />
+
+        </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/shareBtn"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="120dp"
-            android:layout_weight="1"
-            android:background="@drawable/round_back_white_100"
-            android:text="Share Result"
-            android:textAllCaps="false"/>
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/reTakeQuizBtn"
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="15dp"
+            android:id="@+id/saveScoreBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:padding="10dp"
             android:layout_weight="1"
             android:background="@drawable/round_back_secondary_10"
-            android:text="Re-Take Quiz"
+            android:text="Save Point"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"/>
 
-
-
     </LinearLayout>
 
-    </LinearLayout>
 
 </LinearLayout>

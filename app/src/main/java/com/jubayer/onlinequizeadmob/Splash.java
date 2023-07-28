@@ -39,15 +39,10 @@ public class Splash extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-/*
-                if (user != auth.getCurrentUser()) {
-                    Intent intent = new Intent(getApplicationContext(), StartActivity.class);
-                    startActivity(intent);
-                    finish();
-                }*/
+
                startActivity(new Intent(Splash.this, SignIn.class));
                 progressBarSp.setVisibility(View.VISIBLE);
-                finish();
+                finishAffinity();
 
             }
         }, 3000);

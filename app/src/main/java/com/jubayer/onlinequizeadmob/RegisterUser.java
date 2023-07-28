@@ -58,6 +58,16 @@ public class RegisterUser extends AppCompatActivity {
             }
         });
 
+        binding.loginNowBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                startActivity(new Intent(RegisterUser.this, SignIn.class));
+                finishAffinity();
+                Toast.makeText(RegisterUser.this, "Welcome Login now", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     private Boolean validateEmail(){
@@ -134,12 +144,14 @@ public class RegisterUser extends AppCompatActivity {
     private void registerUer() {
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("UserData");
+
         final FirebaseUser user = auth.getCurrentUser();
 
         if (!validateEmail() || !validatePhoneNo() || !validatePassword() || !validateConfirmPassword())
         {
             return;
         }
+
         nameStr = binding.name.getEditableText().toString();
         emailStr = binding.email.getText().toString();
         phoneStr = binding.mobileNo.getText().toString();
@@ -173,6 +185,7 @@ public class RegisterUser extends AppCompatActivity {
     }
 
     private void signUpUser(FirebaseUser user, String nameStr, String emailStr, String passStr) {
+
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("UserData");
        auth.createUserWithEmailAndPassword(emailStr, passStr).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
            @Override
