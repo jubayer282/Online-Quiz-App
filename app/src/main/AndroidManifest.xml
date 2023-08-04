@@ -6,6 +6,7 @@
 
     <application
         android:allowBackup="true"
+        android:allowClearUserData="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/quiz_logo"
@@ -13,9 +14,10 @@
         android:roundIcon="@drawable/quiz_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.Material3.Light"
-        android:allowClearUserData="true"
         tools:targetApi="31">
-
+        <activity
+            android:name=".ForgotPassword"
+            android:exported="false" />
         <activity
             android:name=".SignIn"
             android:exported="false" />
@@ -26,23 +28,13 @@
             android:name=".Splash"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.DayNight">
+
+            <!-- -Making startActivity as launcher activity -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity
-            android:name=".Register"
-            android:exported="false"
-            android:theme="@style/Theme.Material3.Light.NoActionBar" />
-        <activity
-            android:name=".Login"
-            android:exported="true"
-            android:theme="@style/Theme.Material3.Light.NoActionBar">
-
-            <!-- -Making startActivity as launcher activity -->
-
         </activity>
         <activity android:name=".QuizResult" />
         <activity

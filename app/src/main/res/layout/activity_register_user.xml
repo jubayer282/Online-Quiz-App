@@ -85,7 +85,7 @@
         android:background="@drawable/round_back_white_100"
         />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/registerBtn"
         android:layout_width="200dp"
         android:layout_height="wrap_content"

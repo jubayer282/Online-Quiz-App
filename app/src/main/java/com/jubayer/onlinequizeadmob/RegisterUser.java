@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -40,6 +41,7 @@ public class RegisterUser extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityRegisterUserBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().setTitle("Registration Page");
 
         deviceID = Settings.Secure.getString(RegisterUser.this.getContentResolver(), Settings.Secure.ANDROID_ID);
 
@@ -192,6 +194,7 @@ public class RegisterUser extends AppCompatActivity {
            public void onComplete(@NonNull Task<AuthResult> task) {
                if (task.isSuccessful())
                {
+                   dialog.dismiss();
                    String userId = auth.getCurrentUser().getUid();
 
                    HashMap<String , Object> map = new HashMap<>();
@@ -208,6 +211,12 @@ public class RegisterUser extends AppCompatActivity {
 
                            Toast.makeText(RegisterUser.this, "Register Successful", Toast.LENGTH_SHORT).show();
                             startActivity(new Intent(RegisterUser.this, SignIn.class));
+                       }
+                   }).addOnFailureListener(new OnFailureListener() {
+                       @Override
+                       public void onFailure(@NonNull Exception e) {
+                           Toast.makeText(RegisterUser.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                           dialog.dismiss();
                        }
                    });
 

@@ -12,6 +12,7 @@ import androidx.appcompat.widget.AppCompatButton;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
@@ -53,7 +54,7 @@ public class QuizResult extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz_result);
 
-        getSupportActionBar().setTitle("Your Result");
+        getSupportActionBar().setTitle("Result Page");
 
         final TextView scoreTV = findViewById(R.id.scoreTV);
         final TextView totalScoreTV = findViewById(R.id.totalScoreTV);
@@ -95,6 +96,8 @@ public class QuizResult extends AppCompatActivity {
                 sendIntent.putExtra(Intent.EXTRA_TEXT, "My score = " + scoreTV.getText());
 
                 Intent shareIntent = Intent.createChooser(sendIntent, "Share Via");
+                //Uri uri = Uri.parse("https://mail.google.com");
+                //sendIntent.setPackage("https://mail.google.com");
                 startActivity(shareIntent);
             }
         });

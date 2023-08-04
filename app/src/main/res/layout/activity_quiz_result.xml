@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/primary"
+    android:background="@color/blue"
     android:orientation="vertical"
     tools:context=".QuizResult">
 
@@ -199,8 +199,8 @@
             android:fontFamily="@font/poppins_semibold"
             android:padding="10dp"
             android:layout_weight="1"
-            android:background="@drawable/round_back_secondary_10"
-            android:text="Save Point"
+            android:background="@drawable/round_back_sec_str_100"
+            android:text="Save Your Score"
             android:textAllCaps="false"
             android:textColor="#FFFFFF"/>
 

@@ -115,7 +115,6 @@ public class StartActivity extends AppCompatActivity {
 
         } else if (itemId == R.id.rating) {
             Toast.makeText(this, "Thank Yor for Rating", Toast.LENGTH_SHORT).show();
-            // startActivity(new Intent(MainActivity.this, TicketManagerActivity.class));
 
         } else if (itemId == R.id.shareapp) {
             Toast.makeText(this, "Our Apps", Toast.LENGTH_SHORT).show();

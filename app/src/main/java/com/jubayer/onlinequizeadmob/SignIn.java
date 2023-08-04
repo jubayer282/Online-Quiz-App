@@ -15,7 +15,6 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.jubayer.onlinequizeadmob.databinding.ActivityRegisterUserBinding;
 import com.jubayer.onlinequizeadmob.databinding.ActivitySignInBinding;
 
 public class SignIn extends AppCompatActivity {
@@ -52,6 +51,10 @@ public class SignIn extends AppCompatActivity {
 
             logInUser();
 
+        });
+
+        binding.forgotBtn.setOnClickListener(view -> {
+            startActivity(new Intent(SignIn.this, ForgotPassword.class));
         });
     }
 

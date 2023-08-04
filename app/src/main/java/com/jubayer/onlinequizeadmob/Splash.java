@@ -1,6 +1,7 @@
 package com.jubayer.onlinequizeadmob;
 
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,13 +25,16 @@ public class Splash extends AppCompatActivity {
     FirebaseAuth auth;
 
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
+        getSupportActionBar().setTitle("Welcome to our app");
 
         //fAuth = FirebaseAuth.getInstance();
-        quiz = findViewById(R.id.fire);
+        quiz = findViewById(R.id.textView);
+        quiz = findViewById(R.id.textView3);
         Handler handler = new Handler();
         progressBarSp = findViewById(R.id.progressBar5);
         progressBarSp.setVisibility(View.VISIBLE);
