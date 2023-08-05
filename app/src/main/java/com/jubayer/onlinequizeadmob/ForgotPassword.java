@@ -65,10 +65,11 @@ public class ForgotPassword extends AppCompatActivity {
 
         if (!validateEmail())
         {
-            return;
+            dialog.show();
+
         }
 
-        dialog.show();
+        //dialog.show();
 
         auth.sendPasswordResetEmail(binding.email.getText().toString()).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override

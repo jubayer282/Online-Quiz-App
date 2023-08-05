@@ -1,7 +1,5 @@
 package com.jubayer.onlinequizeadmob;
 
-import static com.jubayer.onlinequizeadmob.R.id.startQuizBtn;
-import static com.jubayer.onlinequizeadmob.R.id.userDisplayEmail;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -49,6 +47,7 @@ public class StartActivity extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         textView = findViewById(R.id.user_details);
+        //textView2 = findViewById(R.id.userDisplayEmail);
         user = auth.getCurrentUser();
 
         /*init all drawer layout*/
