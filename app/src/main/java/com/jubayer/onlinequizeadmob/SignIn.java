@@ -29,6 +29,7 @@ public class SignIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivitySignInBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        getSupportActionBar().setTitle("Login Page");
 
 
         auth = FirebaseAuth.getInstance();
@@ -45,6 +46,7 @@ public class SignIn extends AppCompatActivity {
 
         binding.registeredBtn.setOnClickListener(view -> {
             startActivity(new Intent(SignIn.this, RegisterUser.class));
+            Toast.makeText(this, "Welcome to Register Now", Toast.LENGTH_SHORT).show();
         });
 
         binding.loginBtn.setOnClickListener(view -> {
