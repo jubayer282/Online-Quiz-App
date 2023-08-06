@@ -31,10 +31,6 @@ import java.util.Objects;
 
 public class StartActivity extends AppCompatActivity {
 
-    private List<QuestionsList> questionsLists = new ArrayList<>();
-
-    public String correctScore, inCorrectScore;
-
     FirebaseAuth auth;
     Button button;
     TextView textView;
@@ -44,10 +40,7 @@ public class StartActivity extends AppCompatActivity {
     private NavigationView navigationView;
     private long pressedTime;
 
-    private AppCompatButton saveScoreBtn;
 
-    private String deviceID;
-    private DatabaseReference reference;
 
 
     @SuppressLint("MissingInflatedId")

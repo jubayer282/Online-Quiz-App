@@ -16,8 +16,8 @@
         android:fontFamily="@font/poppins_semibold"
         android:gravity="center"
         android:text="Correct Result"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textColor="@color/purple_500"
+        android:textSize="30dp" />
 
 
     <TextView
@@ -27,7 +27,7 @@
         android:fontFamily="@font/poppins_semibold"
         android:gravity="center"
         android:text="InCorrect Result"
-        android:textColor="@color/black"
-        android:textSize="20sp" />
+        android:textColor="#EA1010"
+        android:textSize="30dp" />
 
 </LinearLayout>
