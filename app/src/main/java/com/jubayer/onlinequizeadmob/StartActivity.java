@@ -21,12 +21,19 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 
 import org.checkerframework.checker.nullness.qual.NonNull;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class StartActivity extends AppCompatActivity {
+
+    private List<QuestionsList> questionsLists = new ArrayList<>();
+
+    public String correctScore, inCorrectScore;
 
     FirebaseAuth auth;
     Button button;
@@ -36,6 +43,12 @@ public class StartActivity extends AppCompatActivity {
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
     private long pressedTime;
+
+    private AppCompatButton saveScoreBtn;
+
+    private String deviceID;
+    private DatabaseReference reference;
+
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -109,7 +122,7 @@ public class StartActivity extends AppCompatActivity {
         int itemId = item.getItemId();
 
         if (itemId == R.id.score) {
-
+            startActivity(new Intent(StartActivity.this, StoreResultActivity.class));
             Toast.makeText(this, "Your Score", Toast.LENGTH_SHORT).show();
 
         } else if (itemId == R.id.rating) {

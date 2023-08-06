@@ -70,7 +70,7 @@ public class QuizResult extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         /*get database name*/
-        reference = FirebaseDatabase.getInstance().getReference().child("Score");
+        reference = FirebaseDatabase.getInstance().getReference().child("UserData");
 
 
         // getting questions list from MainActivity
@@ -78,6 +78,7 @@ public class QuizResult extends AppCompatActivity {
 
         totalScoreTV.setText("/" + questionsLists.size());
         scoreTV.setText(getCorrectAnswers() + "");
+
         correctTV.setText(getCorrectAnswers() + "");
         incorrectTV.setText(String.valueOf(questionsLists.size() - getCorrectAnswers()));
 
@@ -85,6 +86,22 @@ public class QuizResult extends AppCompatActivity {
         /*get correct score and get data from result*/
         correctScore = correctTV.getText().toString().trim();
         inCorrectScore = incorrectTV.getText().toString().trim();
+
+        saveScoreBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(QuizResult.this, StoreResultActivity.class);
+                intent.putExtra("correct", correctScore);
+                intent.putExtra("incorrect", inCorrectScore);
+                startActivity(intent);
+
+                /*save firebase realtime database*/
+                savePoint();
+
+            }
+        });
+
 
         shareBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -113,14 +130,14 @@ public class QuizResult extends AppCompatActivity {
         });
 
 
-        saveScoreBtn.setOnClickListener(new View.OnClickListener() {
+  /*      saveScoreBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                savePoint();
+            //    savePoint();
 
             }
-        });
+        });*/
 
 
     }
